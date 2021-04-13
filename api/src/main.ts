@@ -18,7 +18,11 @@
 
 // setTimeout(endBlink, 5000); //stop blinking after 5 seconds
 
-const Gpio = require("onoff").Gpio;
+// const Gpio = require("onoff").Gpio;
+
+import * as onoff from "onoff"
+const Gpio = onoff.Gpio
+
 const led = new Gpio(17, "out");
 const button = new Gpio(4, "in", "both");
 
@@ -27,24 +31,24 @@ button.watch((err, value) => {
   led.writeSync(value);
 });
 
-class Main {
-  constructor() {
-    this.start();
-  }
+// class Main {
+//   constructor() {
+//     this.start();
+//   }
 
-  async start() {
-    let count = 0;
-    console.log("running node process...");
-    // setInterval(() => {
-    //   if (count === 3) {
-    //     console.log(count);
-    //     console.log("killing node process...");
-    //     process.kill(0);
-    //   }
-    //   console.log(count);
-    //   count++;
-    // }, 1000);
-  }
-}
+//   async start() {
+//     let count = 0;
+//     console.log("running node process...");
+//     // setInterval(() => {
+//     //   if (count === 3) {
+//     //     console.log(count);
+//     //     console.log("killing node process...");
+//     //     process.kill(0);
+//     //   }
+//     //   console.log(count);
+//     //   count++;
+//     // }, 1000);
+//   }
+// }
 
-new Main();
+// new Main();
