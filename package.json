@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/chaseoli/node-gpio/issues"
   },
-  "homepage": "https://github.com/chaseoli/node-gpio#readme"
+  "homepage": "https://github.com/chaseoli/node-gpio#readme",
+  "dependencies": {
+    "firebase-admin": "^9.6.0"
+  }
 }
