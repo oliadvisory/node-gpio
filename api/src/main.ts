@@ -1,17 +1,7 @@
 import * as onoff from "onoff";
-import * as admin from "firebase-admin";
 class Main {
   constructor() {
-    this.start();
-  }
-
-  async start() {
-    admin.initializeApp({
-      credential: admin.credential.applicationDefault(),
-      // IMPORTANT: use development database for testing otherwise
-      // you accidentally overwrite your production data
-      databaseURL: process.env.firebase_database_url,
-    });
+    this.gpioTest();
   }
 
   gpioTest() {
